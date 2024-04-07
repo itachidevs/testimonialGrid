@@ -16,7 +16,6 @@ This is a solution to the [Testimonials grid section challenge on Frontend Mento
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -28,15 +27,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+![Frontend Mentor _ Testimonial grid section  - Google Chrome 07-04-2024 18_13_20](https://github.com/babybhavani/testimonialGrid/assets/152834101/2031663e-a063-411e-94a9-0240dac8a390)
 
 ### Links
 
@@ -52,59 +43,173 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
 - [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
+I have learned about css grid and spanning the grid layout. Arranging and making the grid responsive for various view ports. Addition with, grabbed the knowledge and importance of usage of rem in website layouts.  
 
 ```html
 <h1>Some HTML code I'm proud of</h1>
+ <div class="card_1">
+        <figure>
+          <img src="images\image-daniel.jpg" alt="daniel-profile" class="card_1_img">
+        </figure>
+        <section class="card_1_user_data">
+          <h1 class="user_name"> Daniel Clifford</h1>
+          <h2 class="user_state"> Verified Graduate </h2>
+        </section>
+        <div class="card_1_testimony">
+          <p class="header1">
+            I received a job offer mid-course, and the subjects I learned were current, if not more so,
+            in the company I joined. I honestly feel I got every penny’s worth.
+          </p>
+          <p class="footer1">
+            “ I was an EMT for many years before I joined the bootcamp. I’ve been looking to make a
+            transition and have heard some people who had an amazing experience here. I signed up
+            for the free intro course and found it incredibly fun! I enrolled shortly thereafter.
+            The next 12 weeks was the best - and most grueling - time of my life. Since completing
+            the course, I’ve successfully switched careers, working as a Software Engineer at a VR startup. ”
+
+          </p>
+        </div>
+      </div>
 ```
 ```css
 .proud-of-this-css {
   color: papayawhip;
 }
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+
+@media screen and (max-width: 1140px) {
+
+    .subcontainer {
+        width: 828px;
+        height: 864px;
+        grid-template-columns: repeat(3, 256px);
+        grid-template-rows: 284px 266px 266px;
+    }
+
+    .card_2 {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        /* background-color: var(--very-dark-grayish-blue); */
+    }
+
+    .card_3 {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+        background-color: var(--white);
+    }
+
+    .card_4 {
+        grid-column: 1 / 3;
+        grid-row: 3 / 4;
+        /* background-color: var(--very-dark-blackish-blue); */
+    }
+
+    .card_5 {
+        grid-column: 3 / 4;
+        grid-row: 1 / 3;
+        /* background-color: var(--white); */
+    }
+
+}
+
+@media screen and (max-width: 860px) {
+
+    body {
+        align-items: flex-start;
+    }
+
+    .container {
+        padding: 5rem 0;
+    }
+
+    .subcontainer {
+        width: 542px;
+        height: 1424px;
+        grid-template-columns: repeat(2, 256px);
+        grid-template-rows: 284px repeat(4, 266px);
+    }
+
+    .card_5 {
+        grid-column: 1 / -1;
+        grid-row: 4 / 5;
+        /* background-color: var(--white); */
+    }
+
+}
+
+@media screen and (max-width: 580px) {
+
+    .subcontainer {
+        height: auto;
+        grid-template-columns: 328px;
+        grid-template-rows: 444px 240px 222px 384px 438px;
+        justify-content: center;
+    }
+
+    .card_1 {
+        grid-column: auto;
+        grid-row: 1 / 2;
+        /* background-color: var(--moderate-violet); */
+        background-position-x: 200px;
+    }
+
+    .header1 {
+        letter-spacing: .011rem;
+    }
+    
+    .footer1 {
+        letter-spacing: .023rem;
+    }
+
+    .footer2 {
+        font-size: .82rem;
+        font-weight: 400;
+        line-height: 1.13rem;
+        letter-spacing: .007rem;
+        opacity: .6;
+    }
+
+    .card_3 {
+        grid-column: auto;
+        grid-row: 3 / 4;
+        /* background-color: var(--white); */
+    }
+
+    .card_4 {
+        grid-column: auto;
+        grid-row: 4 / 5;
+        /* background-color: var(--very-dark-blackish-blue); */
+    }
+
+    .card_5 {
+        grid-column: auto;
+        grid-row: 5 / 6;
+        /* background-color: var(--white); */
+    }
+
+    .footer5 {
+        font-size: .83rem;
+        font-weight: 400;
+        line-height: 1.13rem;
+        letter-spacing: .002rem;
+        opacity: .7;
+    }
+
 }
 ```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+I want to develop this upto adding more webpages to this section.
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [CSS GRID](https://cssgrid.io/) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
 
 ## Author
+- Frontend Mentor - [@babybhavani](https://www.frontendmentor.io/profile/yourusername)
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
