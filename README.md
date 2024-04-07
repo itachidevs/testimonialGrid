@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/babybhavani/testimonialGrid.git)
-- Live Site URL: [Add live site URL here](https://babybhavani.github.io/testimonialGrid/)
+- Solution URL: [https://github.com/babybhavani/testimonialGrid.git](https://github.com/babybhavani/testimonialGrid.git)
+- Live Site URL: [https://babybhavani.github.io/testimonialGrid/](https://babybhavani.github.io/testimonialGrid/)
 
 ## My process
 
